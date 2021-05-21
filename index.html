@@ -9,23 +9,44 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
+    <main class="container-fluid row">
+        <div class="col-3">
             <div class="card">
+
                 <h3 class="card-header text-uppercase">Search For City</h3>
+
                 <form id="user-form" class="card-body">
-                  <input name="city-input" id="city-input" type="text" autofocus="true" class="form-input" />
+                  <input name="city-input" id="city-input" type="text" class="form-input" />
                   <button type="submit" class="btn">Search</button>
                 </form>
-              </div>
+
+                <div id="city-history"></div>
+            </div>
         </div>
       
-        <div class="col-12 col-md-8">
+        <div class="col-9">
             <h2 id="searched-city"></h2>
             <p id="today"></p>
-            <div id="forecast" class="row"></div>
+            <img id="img"/>
+
+            <div>
+                <ul>
+                    <li>Temperature:<span id="temperature"></span></li>
+                    <li>Humidity:<span id="humidity"></span></li>
+                    <li>Windspeed:<span id="windspeed"></span></li>
+                    <li>UV Index:<span id="uv-index"></span></li>
+
+                </ul>
+            </div>
+
+            <h1>5 Day Forecast</h1>
+            <div id="forecast" class="row">
+            </div>
         </div>
-      </main>
+
+    </main>
+
+
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
