@@ -117,14 +117,15 @@ function forecast(city) {
 
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
+          $("#forecast").empty();
           console.log(data, city);
           for (var i = 5; i < 40; i += 8){
 
             $("#forecast").append(`
                 <div class="card col-2 future-day">
-                  <h6 class="future-date" style="float: left;"></h6>
+                  <h6 class="future-date"></h6>
                   <img class="future-icon" src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png">
-                     <ul>
+                     <ul style="float: left;">
                        <li>Temp: ${data.list[i].main.temp}&#176</li>
                        <li>Wind: ${data.list[i].wind.speed} mph</li>
                        <li>Humidity: ${data.list[i].main.humidity}%</li>
@@ -134,7 +135,7 @@ function forecast(city) {
         }
 
         for (var x = 1; x <= 5; x++){
-            $(".future-date").eq(x - 1).text(moment().add([x], "d").format("(MM/DD/YYYY)"));
+            $(".future-date").eq(x - 1).text(moment().add([x], "d").format("MM/DD/YYYY"));
             console.log($(".future-date").text());
           }
         });

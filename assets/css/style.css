@@ -1,5 +1,63 @@
-.search-column{
-    background-color:	#D3D3D3;
+main {
+    margin: 30px;
+    min-height: 100vh;
+    border-width: 2px;
+    border-color: red;
+}
+h1 {
+    font-family: indie-flower,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+h3 {
+    font-family: indie-flower,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+
+}
+.card-header {
+    background: rgba(255, 230, 0, 0.612);
+    background: linear-gradient(45deg,rgba(0,216,255,1) 48%, rgba(166, 0, 255, 0.742) 100%);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+.card{
+    background: rgba(255, 230, 0, 0.612);
+    background: linear-gradient(-45deg,rgba(0,216,255,1) 48%, rgba(166, 0, 255, 0.742) 100%);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+#city-history{
+    margin: 10px;
+}
+
+input {
+  width: 100%;
+  min-height: 40px;
+  border: none;
+}
+
+.btn {
+    
+  width: 100%;
+  border-width: 2px;
+  border-color: white;
+  margin: 5px 0px;
+  text-align: center;
+  font-family: quicksand,sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .list-group-item{
@@ -11,5 +69,17 @@
 }
 #uv-index{
     padding: 3px;
-    border-radius: 3px;
+    
 }
+.future-day{
+    margin: 10px 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+    background: rgba(255, 230, 0, 0.612);
+    background: linear-gradient(45deg,rgba(0,216,255,1) 48%, rgba(166, 0, 255, 0.742) 100%);
+    border: none;
+    color: white;
+}
+
